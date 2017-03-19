@@ -85,6 +85,10 @@ public class LevelLoader : MonoBehaviour {
 					GameObject lower_right = (Instantiate (EnviorCube [5]) as GameObject);
 					SetPosition (lower_right, xPos, yPos);
 				}
+				if (line [xPos] == 'n') {
+					GameObject racniuncongrats = (Instantiate (EnviorCube [6]) as GameObject);
+					SetPosition (racniuncongrats, xPos, yPos);
+				}
 			}
 //			Debug.Log(line);
 			yPos--;
@@ -103,7 +107,7 @@ public class LevelLoader : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (OrangeCount == 0)
+		if (OrangeCount == 0 && levelNum<3)
 		{
 			if(levelNum < fileNames.Length)
 				levelNum++;
