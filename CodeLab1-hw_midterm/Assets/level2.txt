@@ -1,10 +1,10 @@
 ayyyyyyyyyyyyb
-xxx--------o-x
+xyy-----y--o-x
 x-o----------x
-x---------o--x
+x---yyy---o--x
+x---------y--x
 x------------x
-x------------x
-x-o-xxxx-----x
+x-o-yyyy-----x
 x------------x
 x-o-----o----x
 cyyyyyyyyyyyyd

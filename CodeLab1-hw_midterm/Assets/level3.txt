@@ -1,11 +1,11 @@
 ayyyyyyyyyyyyyyyyyb
-xxx-----x-o-------x
-xx---o--------xxxxx
+xyy-----y-o-------x
+xy---o--------yyyyx
 x-----------------x
-x---xxoxx--------ox
-x-----x-----o-----x
+x---yyoyy--------ox
+x-----y-----o-----x
 x----o------------x
 xo---------------ox
-xxx-----o------o--x
+xyy-----o------o--x
 x-----------------x
 cyyyyyyyyyyyyyyyyyd

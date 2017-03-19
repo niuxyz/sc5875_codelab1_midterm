@@ -21,12 +21,12 @@ public class Wk6Manager : MonoBehaviour {
 		get;
 		private set;
 	}
+	JSONNode WeatherData;
 
 
 
 	// Use this for initialization
-	void Start () {
-		
+	void Awake () {
 		ServicePointManager.ServerCertificateValidationCallback = MyRemoteCertificateValidationCallback;
 
 		//Use UtilScript to write to a file in one line
@@ -75,7 +75,7 @@ public class Wk6Manager : MonoBehaviour {
 		string content =  WeatherFromCity(city,state); 
 		//content = "What";
 		//turn string into a JSONNode
-		JSONNode WeatherData = JSON.Parse(content);
+		WeatherData = JSON.Parse(content);
 
 		//Get the sunset time from the JSONNode
 		//Change making: Change ["Astronomy"]["sunset"] to ["item"]["condition"]["text"]
@@ -85,6 +85,8 @@ public class Wk6Manager : MonoBehaviour {
 		weather = WeatherData["query"]["results"]["channel"]["item"]["condition"]["text"];
 		print (weather);
 		print(DataTime);
+
+		Debug.Log ("START END");
 	}
 
 	//Solve the internet, ignore all of them
@@ -129,17 +131,17 @@ public class Wk6Manager : MonoBehaviour {
 	}	
 
 	// Update is called once per frame
-	void Update () {		
-		string content =  WeatherFromCity(city,state); 
-		//content = "What";
-		//turn string into a JSONNode
-		JSONNode WeatherData = JSON.Parse(content);
-
-		//Get the sunset time from the JSONNode
-		//Change making: Change ["Astronomy"]["sunset"] to ["item"]["condition"]["text"]
-		DataTime = WeatherData["query"]["results"]["channel"]["lastBuildDate"];
-
-		//Shelley, Add Weather by the same way getting the Time
-		weather = WeatherData["query"]["results"]["channel"]["item"]["condition"]["text"];
-	}
+//	void Update () {		
+//		string content =  WeatherFromCity(city,state); 
+//		//content = "What";
+//		//turn string into a JSONNode
+//	 	WeatherData = JSON.Parse(content);
+//
+//		//Get the sunset time from the JSONNode
+//		//Change making: Change ["Astronomy"]["sunset"] to ["item"]["condition"]["text"]
+//		DataTime = WeatherData["query"]["results"]["channel"]["lastBuildDate"];
+//
+//		//Shelley, Add Weather by the same way getting the Time
+//		weather = WeatherData["query"]["results"]["channel"]["item"]["condition"]["text"];
+//	}
 }

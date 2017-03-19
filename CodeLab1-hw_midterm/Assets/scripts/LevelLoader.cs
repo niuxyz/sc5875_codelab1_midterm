@@ -31,7 +31,6 @@ public class LevelLoader : MonoBehaviour {
 
 		int yPos = 0;
 		GameObject player = Instantiate(Resources.Load("Prefabs/Player") as GameObject);
-		Debug.Log ("START CALLED");
 		while(!sr.EndOfStream){
 			string line = sr.ReadLine();
 
